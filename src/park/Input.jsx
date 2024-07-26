@@ -6,7 +6,6 @@ const CardComponent = () => {
   const [style, setStyle] = useState({
     containerTransform: '',
     overlayBackgroundPosition: '',
-    overlayFilter: 'filter: opacity(0)'
   });
 
   const handleMouseMove = (e) => {
@@ -28,14 +27,12 @@ const CardComponent = () => {
   };
 
   return (
-    <>
+    <div style={{ display: 'flex' }}>    
     <div
-      className="container"
       style={{ transform: style.containerTransform }}
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseOut}
-    >
-      
+    > 
     <div
   style={{
     width: '220px',
@@ -44,7 +41,7 @@ const CardComponent = () => {
     backgroundSize: 'cover'
   }}></div>
     </div>
-    </>
+    </div>
     
   );
 };
